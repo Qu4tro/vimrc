@@ -17,6 +17,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/limelight.vim'
 
 Plug 'scrooloose/syntastic'
 
@@ -34,6 +35,9 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-vinegar'
 Plug 'jamessan/vim-gnupg'
 Plug 'sheerun/vim-polyglot'
+
+Plug 'nathangrigg/vim-beancount'
+
 call plug#end()
 
 "

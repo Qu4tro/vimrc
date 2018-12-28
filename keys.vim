@@ -1,5 +1,6 @@
-nnoremap <PageUp> :bprev<CR>
-nnoremap <PageDown> :bnext<CR>
+nnoremap º :bprev<CR>
+nnoremap ~ :bnext<CR>
+
 nnoremap <CR> za
 nnoremap Q @q
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
@@ -9,9 +10,9 @@ nnoremap k gk
 nnoremap q: :q
 nnoremap !! :%!
 
-vnoremap <leader>y "+y
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+xnoremap <leader>y "+y
+xnoremap <leader>p "+p
+xnoremap <leader>P "+P
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
@@ -43,7 +44,11 @@ nnoremap <leader>fx :Filetypes<CR>
 nnoremap <leader>ti :IndentLinesToggle<CR>
 nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>tg :Goyo<CR>
-nnoremap <leader>tl :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+nnoremap <leader>tb :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+nnoremap <Leader>tl :Limelight!!<CR>
+
+xnoremap <Leader>vl <Plug>(Limelight)
+
 nmap <leader>th <plug>(QuickScopeToggle)
 
 nnoremap <leader>cy "+y
@@ -52,7 +57,7 @@ nnoremap <leader>cP "+P
 
 nnoremap <leader>mb :center 72<CR>hhv0r#A<SPACE><ESC>36A#<ESC>d72<BAR>YppVr#kk.
 
-vmap - <Plug>(expand_region_shrink)
+xmap - <Plug>(expand_region_shrink)
 
 let g:UltiSnipsExpandTrigger="<tab>"
 

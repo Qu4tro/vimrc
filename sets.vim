@@ -26,9 +26,9 @@ set nobackup
 set nowb
 
 "Indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab        "Tabs not welcome
 
 "Folding
@@ -56,18 +56,27 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Range of greys (from black to white): [232, 255]
+let g:limelight_conceal_ctermfg = 237
+
 
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 " let g:formatdef_sql = '"sqlformat --reindent --keywords upper --identifiers lower --comma_first True --use_space_around_operators"'
 " let g:formatters_sql = ['sql']
 
+let g:sql_type_default = 'pgsql'
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_sh_shellcheck_args="-x"
 let g:syntastic_c_compiler_options = '-Wall -Wextra'
+let g:syntastic_javascript_checkers = ['eslint']
+
 
 
 augroup AutoWrite
@@ -81,3 +90,14 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
+fun! AutoFormatSpecificFiles()
+    if &ft =~ 'javascript'
+        :Autoformat
+    endif
+endfun
+
+au BufWrite * call AutoFormatSpecificFiles()
+
