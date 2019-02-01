@@ -14,8 +14,11 @@ Plug 'ap/vim-buftabline'
 Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 
-Plug 'junegunn/goyo.vim'
+Plug 'mhinz/vim-startify'
+Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/goyo.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/limelight.vim'
 
@@ -25,7 +28,7 @@ Plug 'luochen1990/rainbow'
 Plug 'Raimondi/delimitMate'
 Plug 'gorodinskiy/vim-coloresque'
 
-Plug 'tpope/vim-fugitive'
+Plug 'ambv/black'
 Plug 'chiel92/vim-autoformat'
 
 Plug 'sirver/ultisnips'
@@ -33,10 +36,15 @@ Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
 
 Plug 'tpope/vim-vinegar'
+Plug 'lingceng/z.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'nathangrigg/vim-beancount'
+
+Plug 'AaronLasseigne/yank-code'
+Plug 'airblade/vim-rooter'
+
 
 call plug#end()
 

@@ -10,23 +10,19 @@ nnoremap k gk
 nnoremap q: :q
 nnoremap !! :%!
 
-xnoremap <leader>y "+y
-xnoremap <leader>p "+p
-xnoremap <leader>P "+P
-
+call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 nnoremap <leader>. :
-nnoremap <leader>w :w<CR>
 
-nnoremap <silent> <leader><Bar> <c-w>v
-nnoremap <silent> <leader>- <c-w>s
-nnoremap <silent> <leader>q <c-w>q
-
-nnoremap <silent> <leader>l <c-w>l
-nnoremap <silent> <leader>h <c-w>h
-nnoremap <silent> <leader>j <c-w>j
-nnoremap <silent> <leader>k <c-w>k
+" Panes
+nnoremap <silent> <leader>p<Bar> <c-w>v
+nnoremap <silent> <leader>p- <c-w>s
+nnoremap <silent> <leader>pq <c-w>q
+nnoremap <silent> <leader>pl <c-w>l
+nnoremap <silent> <leader>ph <c-w>h
+nnoremap <silent> <leader>pj <c-w>j
+nnoremap <silent> <leader>pk <c-w>k
 
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>fc :Commits<CR>
@@ -49,11 +45,13 @@ nnoremap <Leader>tl :Limelight!!<CR>
 
 xnoremap <Leader>vl <Plug>(Limelight)
 
-nmap <leader>th <plug>(QuickScopeToggle)
+nmap     <leader>th <plug>(QuickScopeToggle)
 
-nnoremap <leader>cy "+y
-nnoremap <leader>cp "+p
-nnoremap <leader>cP "+P
+xnoremap <leader>yy "+y
+xnoremap <leader>yp "+p
+xnoremap <leader>yP "+P
+xnoremap <leader>yP "+P
+map      <leader>yc <plug>YankCode
 
 nnoremap <leader>mb :center 72<CR>hhv0r#A<SPACE><ESC>36A#<ESC>d72<BAR>YppVr#kk.
 

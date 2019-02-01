@@ -51,6 +51,12 @@ if has('persistent_undo')
     set undofile
     set undolevels=1000
 endif
+set viminfo+=n~/.vim/viminfo
+
+
+let g:startify_bookmarks = [
+  \ { 'v': '$MYVIMRC' },
+  \ ]
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -59,6 +65,41 @@ set statusline+=%*
 " Range of greys (from black to white): [232, 255]
 let g:limelight_conceal_ctermfg = 237
 
+let g:which_key_map =  {}
+
+let g:which_key_map.f = { 'name' : 'fzf' }
+
+let g:which_key_map.p = { 'name' : 'pane' }
+let g:which_key_map.p = {
+      \ 'name' : 'pane',
+      \ 'q' : 'window-quit',
+      \ '-' : 'split-horizontal',
+      \ '|' : 'split-vertical',
+      \ 'h' : 'goto-left',
+      \ 'j' : 'goto-down',
+      \ 'k' : 'goto-up',
+      \ 'l' : 'goto-right',
+    \ }
+
+let g:which_key_map.m = { 'name' : 'misc' }
+let g:which_key_map.m.b = 'box#'
+
+let g:which_key_map.t = { 'name' : 'toggle' }
+let g:which_key_map.t.b = 'background'
+let g:which_key_map.t.g = 'goyo'
+let g:which_key_map.t.l = 'limelight'
+let g:which_key_map.t.h = 'quickscope'
+let g:which_key_map.t.i = 'indent-lines'
+let g:which_key_map.t.t = 'tagbar'
+
+let g:which_key_map.y = { 'name' : 'yank' }
+let g:which_key_map.y.p = 'system-clip-paste-before'
+let g:which_key_map.y.P = 'system-clip-paste-after'
+let g:which_key_map.y.y = 'system-clip-yank'
+let g:which_key_map.y.c = 'yank-code'
+
+let g:which_key_map.w = { 'name' : 'save' }
+
 
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
@@ -66,7 +107,7 @@ let g:autoformat_retab = 0
 " let g:formatters_sql = ['sql']
 
 let g:sql_type_default = 'pgsql'
-
+let g:netrw_browsex_viewer="xdg-open"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
