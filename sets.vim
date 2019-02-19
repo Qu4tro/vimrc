@@ -118,8 +118,6 @@ let g:syntastic_sh_shellcheck_args="-x"
 let g:syntastic_c_compiler_options = '-Wall -Wextra'
 let g:syntastic_javascript_checkers = ['eslint']
 
-
-
 augroup AutoWrite
     autocmd! BufLeave * :update
 augroup END

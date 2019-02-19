@@ -3,7 +3,6 @@ nnoremap ~ :bnext<CR>
 
 nnoremap <CR> za
 nnoremap Q @q
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 nnoremap j gj
 nnoremap k gk
@@ -42,6 +41,7 @@ nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>tg :Goyo<CR>
 nnoremap <leader>tb :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 nnoremap <Leader>tl :Limelight!!<CR>
+nnoremap <Leader>tw :set wrap!<CR>
 
 xnoremap <Leader>vl <Plug>(Limelight)
 
