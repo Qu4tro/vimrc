@@ -1,5 +1,7 @@
 set nocompatible "Use Vim settings, rather then Vi settings.
 set background=dark
+let base16colorspace=256
+set termguicolors
 
 set autowrite        "
 set autowriteall     "
@@ -44,6 +46,12 @@ set smartcase        "Only ignore case when searching term is in lowercase"
 "Splits
 set splitbelow       " Horizontal split below current.
 set splitright       " Vertical split to right of current.
+
+"Italic comments
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+let g:gruvbox_italic=1
+highlight Comment cterm=italic
 
 if has('persistent_undo')
     silent !mkdir ~/.vim/undo > /dev/null 2>&1
@@ -91,6 +99,7 @@ let g:which_key_map.t.l = 'limelight'
 let g:which_key_map.t.h = 'quickscope'
 let g:which_key_map.t.i = 'indent-lines'
 let g:which_key_map.t.t = 'tagbar'
+let g:which_key_map.t.s = 'syntastic'
 
 let g:which_key_map.y = { 'name' : 'yank' }
 let g:which_key_map.y.p = 'system-clip-paste-before'
@@ -117,6 +126,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_sh_shellcheck_args="-x"
 let g:syntastic_c_compiler_options = '-Wall -Wextra'
 let g:syntastic_javascript_checkers = ['eslint']
+
+" let g:python_host_prog="/usr/bin/python"
+let g:black_virtualenv = '/home/quatro/.local/share/virtualenvs/black'
 
 augroup AutoWrite
     autocmd! BufLeave * :update

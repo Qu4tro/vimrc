@@ -42,6 +42,7 @@ nnoremap <leader>tg :Goyo<CR>
 nnoremap <leader>tb :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 nnoremap <Leader>tl :Limelight!!<CR>
 nnoremap <Leader>tw :set wrap!<CR>
+nnoremap <Leader>ts :SyntasticToggleMode<CR>
 
 xnoremap <Leader>vl <Plug>(Limelight)
 
